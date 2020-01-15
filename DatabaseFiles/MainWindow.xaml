@@ -18,12 +18,12 @@
             <ColumnDefinition Width="539*"/>
             <ColumnDefinition Width="166*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="textBoxFilename" Grid.Column="1" HorizontalAlignment="Center" Text="Файл" TextWrapping="Wrap" VerticalAlignment="Center" Width="539" Height="37" Grid.Row="1" FontSize="20"/>
+        <TextBox x:Name="textBoxFilename" Grid.Column="1" HorizontalAlignment="Center" Text="Файл" TextWrapping="Wrap" VerticalAlignment="Center" Width="539" Height="35" Grid.Row="1" FontSize="20"/>
         <ListBox x:Name="listBoxFiles" Grid.Column="1" Grid.Row="2" MouseDoubleClick="MouseClickFiles">
             
         </ListBox>
         <Button Content="Добавить" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Height="37" Width="120" FontSize="20" FontWeight="Bold" Background="Black" Foreground="White" Click="Add"/>
-        <Button Content="Удалить" Grid.Column="2" HorizontalAlignment="Center" Margin="0,201,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="166" FontSize="20" FontWeight="Bold" Background="Red" Foreground="White" Click="Delete"/>
+        <Button Content="Удалить" Grid.Column="2" HorizontalAlignment="Center" Margin="0,190,0,0" Grid.Row="2" VerticalAlignment="Top" Height="48" Width="166" FontSize="20" FontWeight="Bold" Background="Red" Foreground="White" Click="Delete"/>
 
     </Grid>
 </Window>

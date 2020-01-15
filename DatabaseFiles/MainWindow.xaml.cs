@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,18 +28,30 @@ namespace DatabaseFiles
         }
 
         private void Add(object sender, RoutedEventArgs e)
-        {
-            
+        {  
+            using(var context = new Context())
+            {                
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.DefaultExt = ".txt";
+                context.Add(saveFileDialog);
+                context.SaveChanges();
+            }
         }
 
         private void Delete(object sender, RoutedEventArgs e)
         {
-
+            using(var context = new Context())
+            {
+                var delrlm = listBoxFiles.SelectedItem;
+                listBoxFiles.Items.Remove(delrlm);
+                context.Remove(delrlm);
+                context.SaveChanges();
+            }
         }
 
         private void MouseClickFiles(object sender, MouseButtonEventArgs e)
         {
-            DirectoryInfo dirinf = new DirectoryInfo(@"C:\Users\ЕсентайА\Desktop");
+            DirectoryInfo dirinf = new DirectoryInfo(@"C:\Users\ealih\Desktop\elihan\samples");
             FileInfo[] fileinfo = dirinf.GetFiles();
             using(var context = new Context())
             {

@@ -14,7 +14,7 @@ namespace DatabaseFiles
         public DbSet<File> Files { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=A-104-10;Database=FilesDb;Trusted_Connection=true;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-468M5GV;Database=FilesDb;Trusted_Connection=true;");
         }
     }
 }
